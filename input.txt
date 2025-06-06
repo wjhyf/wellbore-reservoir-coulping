@@ -1,0 +1,122 @@
+# ======================================================
+# 井筒多相多组分模拟输入文件示例
+# ======================================================
+
+# 模拟类型：1=单相流, 2=两相流, 3=多相流
+simulationType 3
+
+# 两相流类型（仅当 simulationType=2 时有效）
+phaseType Oil-Water
+
+# 井筒总长度 (m)
+wellboreTotalLength 1000.0
+
+# 井筒网格数 (个)
+wellboreCells 100
+
+# 井口压力 P0 (Pa)
+P0 5000000.0
+
+# 井口温度 T0 (K)
+T0 333.15
+
+# 重力加速度 g (m/s^2)
+g 9.81
+
+# 摩擦因子
+frictionFactor 0.02
+
+# 质量流率 massFlow (kg/s)
+massFlow 10.0
+
+# 井筒直径 D (m)
+D 0.1
+
+# 温度梯度 dTdz (K/m)
+dTdz 0.03
+
+# 烃蒸汽密度 rhoHCVapor (kg/m^3)
+rhoHCVapor 0.2
+
+# 烃液体密度 rhoHCLiquid (kg/m^3)
+rhoHCLiquid 850.0
+
+# 水密度 rhoWater (kg/m^3)
+rhoWater 1000.0
+
+# 气相粘度 muG (Pa·s)
+muG 1e-4
+
+# 液相粘度 muL (Pa·s)
+muL 5e-3
+
+# 烃类总质量分数 xHcTotal
+xHcTotal 0.8
+
+# 水总质量分数 xWater_Total
+xWater_Total 0.2
+
+# 组分数目 numComponents
+numComponents 5
+
+# 组分名称 compNames（按 numComponents 个名称给出）
+compNames C1 C2 C3 C15 Water
+
+# 组分临界温度 compTcrit (K)，与 compNames 顺序一一对应
+compTcrit 190.6 305.4 369.8 724.4 647.1
+
+# 组分临界压力 compPcrit (Pa)，与 compNames 顺序一一对应
+compPcrit 4599000 4872000 4248000 1830000 22064000
+
+# 组分偏心因子 compOmega，与 compNames 顺序一一对应
+compOmega 0.008 0.098 0.152 0.55 0.344
+
+# 组分分子量 compMw (g/mol)，与 compNames 顺序一一对应
+compMw 16.04 30.07 44.97 206.0 18.02
+
+# 烃各组分质量分数 xHcFrac，与 compNames 顺序一一对应
+xHcFrac 0.05 0.15 0.2 0.4 0.2
+
+# 总模拟时间 (s)
+simulationTime 3600
+
+# 时间步长 (s)
+timeStep 360
+
+# 界面张力 theta_gl (N/m)
+theta_gl 0.03
+
+# 井斜角 theta (rad)
+theta 0.0
+
+# 热传递系数 heatTransferCoeff (W/(m^2·K))
+heatTransferCoeff 10.0
+
+# —— 串联热阻相关参数 —— 
+
+# 油管内径 r_i (m)
+r_i 0.05
+
+# 油管外径 r_o (m)
+r_o 0.06
+
+# 油管材料导热率 k_i (W/(m·K))
+k_i 16.0
+
+# 油管内壁对流换热系数 h_i (W/(m^2·K))
+h_i 100.0
+
+# 套管外径 r_c (m)
+r_c 0.08
+
+# 套管材料导热率 k_c (W/(m·K))
+k_c 45.0
+
+# 水泥层外径（或井筒外径） r_m (m)
+r_m 0.12
+
+# 水泥/环空材料导热率 k_m (W/(m·K))
+k_m 1.7
+
+# 井筒外壁对流换热系数 h_o (W/(m^2·K))
+h_o 2.0
